@@ -35,9 +35,16 @@ delete from Usuarios where IdUsuarios = 2
 
 ------------------------------------------
 
-insert into Lancamentos (Nome,Sinopse,Tipo,Duracao,Datal,Plataforma,IdCategoria) values ('Olhos que Condenam', 'Cinco adolescentes do Harlem vivem um pesadelo depois de serem injustamente acusados de um ataque brutal no Central Park. Baseada em uma história real.','Série','4 horas','31/05/2019','Netflix','2');
-insert into Lancamentos (Nome,Sinopse,Tipo,Duracao,Datal,Plataforma,IdCategoria) values ('Batalhas','Com a falência do pai, a jovem bailarina Amalie vê seu estilo de vida luxuoso desmoronar. Mas ela descobre um novo ritmo ao conhecer o dançarino de hip-hop Mikael.', 'Filme', '1 hora', '21/09/2018','Netflix','2');
-insert into Lancamentos (Nome,Sinopse,Tipo,Duracao,Datal,Plataforma,IdCategoria) values ('Um porto seguro', 'Uma mulher misteriosa se muda para e recomeça sua vida.E acaba levantando questionamentos sobre seu passado, que esconde um terrível segredo que continua assombrando a sua vida.','Filme', '1 hora','19/04/2013','Cinema','5');
+insert into Plataformas (Nome) values ('Netflix');
+insert into Plataformas (Nome) values ('Cinema');
+
+select * from Plataformas;
+
+------------------------------------------
+
+insert into Lancamentos (Nome,Sinopse,Tipo,Duracao,Datal,IdCategoria,IdPlataforma) values ('Olhos que Condenam', 'Cinco adolescentes do Harlem vivem um pesadelo depois de serem injustamente acusados de um ataque brutal no Central Park. Baseada em uma história real.','Série','4 horas','31/05/2019','2','1');
+insert into Lancamentos (Nome,Sinopse,Tipo,Duracao,Datal,IdCategoria,IdPlataforma) values ('Batalhas','Com a falência do pai, a jovem bailarina Amalie vê seu estilo de vida luxuoso desmoronar. Mas ela descobre um novo ritmo ao conhecer o dançarino de hip-hop Mikael.', 'Filme', '1 hora', '21/09/2018','2','1');
+insert into Lancamentos (Nome,Sinopse,Tipo,Duracao,Datal,IdCategoria,IdPlataforma) values ('Um porto seguro', 'Uma mulher misteriosa se muda para e recomeça sua vida.E acaba levantando questionamentos sobre seu passado, que esconde um terrível segredo que continua assombrando a sua vida.','Filme', '1 hora','19/04/2013','5','2');
 
 delete from Lancamentos;
 
@@ -46,4 +53,4 @@ delete from Lancamentos;
 
 ----inserir mias 3 filmes que estão no cinema
 
-insert into Lancamentos (Nome,Sinopse,Tipo,Duracao,Datal,Plataforma,IdCategoria) values ('O rei leão', 'Traído e exilado de seu reino, o leãozinho Simba precisa descobrir como crescer e retomar seu destino como herdeiro real nas planícies da savana africana.','Filme', '2 horas' ,'18/06/2019', 'Cinema', '2');
+insert into Lancamentos (Nome,Sinopse,Tipo,Duracao,Datal,IdCategoria,IdPlataforma) values ('O rei leão', 'Traído e exilado de seu reino, o leãozinho Simba precisa descobrir como crescer e retomar seu destino como herdeiro real nas planícies da savana africana.','Filme', '2 horas' ,'18/06/2019', '2','2');

@@ -35,7 +35,24 @@ IdLancamento   int primary key identity
 ,IdCategoria   int foreign key references Categorias (IdCategoria)
 );
 
-------------------
----ex. extra
+create table Plataformas
+(
+IdPlataforma   int primary key identity
+,Nome           varchar (200) not null unique 
+);
+
+drop table Lancamentos
+
+create table Lancamentos
+(
+IdLancamento   int primary key identity 
+,Nome          varchar (250) not null unique 
+,Sinopse       varchar (255) not null unique 
+,Tipo          varchar (200) not null 
+,Duracao       varchar (200) not null 
+,Datal         datetime
+,IdCategoria   int foreign key references Categorias (IdCategoria)
+,IdPlataforma   int foreign key references Plataformas (IdPlataforma)
+);
 
 
